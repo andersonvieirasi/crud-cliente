@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página Inicial</title>
+</head>
+<body>
+	{% for i in posts %}
+
+	<h1>{{i.title}}</h1>
+	<h2>{{i.author}}</h2>
+	<p>{{i.text}}</p>
+	<p>{{i.created_date}}</p>
+	<p>{{i.published_date}}</p>
+	<br><br>
+	{% endfor %}
+
+</body>
+</html>

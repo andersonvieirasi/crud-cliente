@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+					<section id="two">
+						<h1>Listagem dos Clientes</h1>
+						<div class="row">
+						{% for i in clientes %}	
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="{% static 'images/fulls/01.jpg'%}" class="image fit thumb"><img src="{% static 'images/thumbs/01.jpg'%}" alt="" /></a>
+								<h2>{{i.name}}</h2>
+								<h3>{{i.birthday}}</h3>
+							
+								<ul class="actions">
+							<li><a href="" class="button">Conhecer Mais</a></li>
+							</ul>
+							</article>
+							
+							{% endfor %}
+						</div>
+						
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-home"><span class="label">Endereço</span></h3>
+										Rua tabira, 45, Arthur Lundgren I.<br />
+										Paulista, Pernambuco <br />
+										Brasil
+									</li>
+									<li>
+										<h3 class="icon solid fa-mobile-alt"><span class="label">Telefone</span></h3>
+										81 - 99999 - 9999
+									</li>
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										<a href="#">anderson@anderson.com.br</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+				
+
+			</div>
+{% endblock %}	
